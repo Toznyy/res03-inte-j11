@@ -1,0 +1,137 @@
+body {
+    margin:0;
+    width:100vw;
+    height:100vh;
+    display: grid;
+    grid-template-rows: 0.1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+h1 {
+    grid-column: 1 / 3;
+    text-align: center;
+}
+
+section {
+    display: grid;
+    grid-template-rows: 0.1fr 1fr;
+    padding:5px;
+}
+
+section h2 {
+    text-align: center;
+}
+
+section {
+    border-top: 1px solid black;
+}
+
+section:first-of-type, section:nth-of-type(3) {
+    border-right: 1px solid black;
+}
+
+
+/* EXERCICE 1 */
+
+@keyframes appear {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+#ex1 div {
+    width: 15vh;
+    height: 15vh;
+    background-color: red;
+    opacity: 0;
+    animation-name : appear;
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+/* EXERCICE 2 */
+
+@keyframes appear2 {
+    from {
+        transform:translateX(0);
+    }
+    to {
+        transform:translateX(15vh);
+    }
+}
+
+#ex2 div {
+    width: 15vh;
+    height: 15vh;
+    background: linear-gradient(red, blue);
+    border-radius: 50%;
+    animation-name : appear2;
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+
+/* EXERCICE 3 */
+
+@keyframes appear3 {
+    from {
+        transform:translateX(0) rotate(0);
+        ;
+    }
+    to {
+        transform:translateX(15vh) rotate(180deg);
+        
+    }
+}
+
+#ex3 div {
+    width: 15vh;
+    height: 15vh;
+    background: linear-gradient(red, blue);
+    border-radius: 50%;
+    animation-name : appear3;
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+
+/* EXERCICE 4 */
+
+@keyframes appear4 {
+    0% {
+        transform:translateY(0) translate(0) rotate(0);
+    }
+
+    25% {
+        transform:translateY(15vh) translateX(10vh) rotate(45deg);
+    }
+
+    50% {
+        transform:translateY(8vh) translateX(18vh) rotate(90deg);
+    }
+
+    75% {
+        transform:translateY(15vh) translateX(24vh) rotate(135deg);
+    }
+    
+    100% {
+        transform:translateY(15vh) translateX(28vh) rotate(180deg);
+    }
+}
+
+#ex4 div {
+    width: 15vh;
+    height: 15vh;
+    background: linear-gradient(red, blue);
+    border-radius: 50%;
+    animation-name : appear4;
+    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
